@@ -64,13 +64,13 @@ namespace TesteBestProjects.Controllers
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            Pessoa produto = db.Pessoa.Find(id);
-            if (produto == null)
+            Pessoa pessoa = db.Pessoa.Find(id);
+            if (pessoa == null)
             {
                 return HttpNotFound();
             }
 
-            return View(produto);
+            return View(pessoa);
         }
         [HttpPost]
         [ValidateAntiForgeryToken]
@@ -78,14 +78,14 @@ namespace TesteBestProjects.Controllers
         {
             if (ModelState.IsValid)
             {
-                var produto = db.Pessoa.Find(model.PessoaId);
-                if (produto == null)
+                var pessoa = db.Pessoa.Find(model.PessoaId);
+                if (pessoa == null)
                 {
                     return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
                 }
-                produto.Nome = model.Nome;
-                produto.Telefone = model.Telefone;
-                produto.Celular = model.Celular;
+                pessoa.Nome = model.Nome;
+                pessoa.Telefone = model.Telefone;
+                pessoa.Celular = model.Celular;
 
                 db.SaveChanges();
                 return RedirectToAction("Index");

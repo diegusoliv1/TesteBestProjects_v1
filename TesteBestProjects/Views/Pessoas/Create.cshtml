@@ -13,7 +13,7 @@
         @Html.LabelFor(m => m.Nome, new { @class = "control-label col-md-2" })
         <div class="col-md-10">
             @Html.TextBoxFor(m => m.Nome,
-                               new { @class = "form-control", @placeholder = "Nome do produto" })
+                               new { @class = "form-control", @placeholder = "Nome da Pessoa" })
             @Html.ValidationMessageFor(m => m.Nome, "", new { @class = "text-danger" })
         </div>
     </div>
@@ -21,7 +21,7 @@
         @Html.LabelFor(m => m.Telefone, new { @class = "control-label col-md-2" })
         <div class="col-md-10">
             @Html.TextBoxFor(m => m.Telefone,
-                               new { @class = "form-control", @placeholder = "Descrição do produto" })
+                               new { @class = "form-control", @placeholder = "Telefone da Pessoa" })
             @Html.ValidationMessageFor(m => m.Telefone, "", new { @class = "text-danger" })
         </div>
     </div>
@@ -29,7 +29,7 @@
         @Html.LabelFor(m => m.Celular, new { @class = "control-label col-md-2" })
         <div class="col-md-10">
             @Html.TextBoxFor(m => m.Celular,
-                               new { @class = "form-control", @placeholder = "Descrição do produto" })
+                               new { @class = "form-control", @placeholder = "Celular" })
             @Html.ValidationMessageFor(m => m.Celular, "", new { @class = "text-danger" })
         </div>
     </div>
